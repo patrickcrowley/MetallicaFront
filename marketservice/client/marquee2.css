@@ -1,0 +1,101 @@
+.simple-marquee-container *{
+	/* -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+    font-family:Arial, "Helvetica Neue", Helvetica, sans-serif; */
+   
+    /* Starting position */
+    -moz-transform:translateX(0%);
+    -webkit-transform:translateX(50%);	
+    transform:translateX(0%);
+    /* Apply animation to this element */	
+    -moz-animation: scroll-left 15s linear infinite;
+    -webkit-animation: scroll-left 20s linear infinite;
+    animation: scroll-left 20s linear infinite;
+   }
+   
+   /* @-moz-keyframes scroll-left {
+    0%   { -moz-transform: translateX(50%); }
+    100% { -moz-transform: translateX(-50%); }
+   }
+   @-webkit-keyframes scroll-left {
+    0%   { -webkit-transform: translateX(50%); }
+    100% { -webkit-transform: translateX(-50%); }
+   } */
+    @keyframes scroll-left {
+    0%   { 
+    -moz-transform: translateX(50%); 
+    -webkit-transform: translateX(50%); 
+    transform: translateX(50%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-50%); 
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); 
+    }
+   }
+
+
+.simple-marquee-container {
+	width: 100%;
+	background: grey;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 45px;
+	position: relative;
+	cursor: pointer;
+}
+
+.marquee-sibling {
+	padding: 0;
+	background: rgb(61, 61, 61);
+	width: 20%;
+	height: 45px;
+	line-height: 42px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #ffffff;
+	text-align: center;
+	float: left;
+	left: 0;
+	z-index: 2000;
+}
+
+.marquee, *[class^="marquee"] {
+	display: inline-block;
+	white-space: nowrap;
+    position:absolute;
+   
+}
+
+.marquee{
+  margin-left: 25%;
+  
+}
+
+.marquee-content-items{
+  display: inline-block;
+  padding: 5px;
+  margin: 0; 
+  height: 45px;
+  position: relative;
+
+  /* -moz-animation: scroll-left 15s linear infinite;
+  -webkit-animation: scroll-left 10s linear infinite;
+  animation: scroll-left 10s linear infinite; */
+}
+
+.marquee-content-items li{
+  display: inline-block;
+  line-height: 35px;
+  color: #fff;
+}
+
+
+.marquee-content-items li:after{
+	content: "|";
+	margin: 0 1em;
+}
